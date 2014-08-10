@@ -1,0 +1,118 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    / This file has been downloaded from Bootsnipp.com. Enjoy!
+    %title Pinterest like login box - Bootsnipp.com
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    %link{href: "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css", rel: "stylesheet"}/
+    :css
+      .form-signin {
+        max-width: 400px; 
+        display:block;
+        background-color: #f7f7f7;
+        -moz-box-shadow: 0 0 3px 3px #888;
+          -webkit-box-shadow: 0 0 3px 3px #888;
+      	box-shadow: 0 0 3px 3px #888;
+        border-radius:2px;
+      }
+      .main{
+      	padding: 38px;
+      }
+      .social-box{
+        margin: 0 auto;
+        padding: 38px;
+        border-bottom:1px #ccc solid;
+      }
+      .social-box a{
+        font-weight:bold;
+        font-size:18px;
+        padding:8px;
+      }
+      .social-box a i{
+        font-weight:bold;
+        font-size:20px;
+      }
+      .heading-desc{
+      	font-size:20px;
+      	font-weight:bold;
+      	padding:38px 38px 0px 38px;
+      	
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin .checkbox {
+        font-weight: normal;
+      }
+      .form-signin .form-control {
+        position: relative;
+        font-size: 16px;
+        height: 20px;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+      .form-signin input[type="text"] {
+        margin-bottom: 10px;
+        border-radius: 5px;
+        
+      }
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .login-footer{
+      	background:#f0f0f0;
+      	margin: 0 auto;
+      	border-top: 1px solid #dadada;
+      	padding:20px;
+      }
+      .login-footer .left-section a{
+      	font-weight:bold;
+      	color:#8a8a8a;
+      	line-height:19px;
+      }
+      .mg-btm{
+      	margin-bottom:20px;
+      }
+    %script{src: "http://code.jquery.com/jquery-1.10.2.min.js"}
+    %script{src: "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"}
+  %body
+    .container
+      .row
+        %form.form-signin.mg-btm
+          %h3.heading-desc
+            %button.close.pull-right{"aria-hidden" => "true", type: "button"} ×
+            Login to Bootsnipp
+          .social-box
+            .row.mg-btm
+              .col-md-12
+                %a.btn.btn-primary.btn-block{href: "#"}
+                  %i.icon-facebook
+                     Login with Facebook
+            .row
+              .col-md-12
+                %a.btn.btn-info.btn-block{href: "#"}
+                  %i.icon-twitter
+                     Login with Twitter
+          .main
+            %input.form-control{autofocus: "", placeholder: "Email", type: "text"}/
+            %input.form-control{placeholder: "Password", type: "password"}/
+            Are you a business?
+            %a{href: ""} Get started here
+            %span.clearfix
+          .login-footer
+            .row
+              .col-xs-6.col-md-6
+                .left-section
+                  %a{href: ""} Forgot your password?
+                  %a{href: ""} Sign up now
+              .col-xs-6.col-md-6.pull-right
+                %button.btn.btn-large.btn-danger.pull-right{type: "submit"} Login
+    :javascript
