@@ -74,5 +74,81 @@
                     .row
                       .col-lg-12
                         %p
-                          %a.btn.btn-danger.btn-block{href: "#"} Cerrar Sesion
+                          %a.btn.btn-danger.btn-block{href: "#"} Logout
+    .container
+
+      %br
+      %br
+      %br
+      %br
+
+      .btn-group
+        .btn.btn-default.txn_op.btc2str{href: "#"} Bitcoin -> Stellar
+
+      .btn-group
+        .btn.btn-default.txn_op.str2btc{href: "#"} Stellar -> Bitcoin
+
+      .btn-group
+        .btn.btn-default.txn_op.receivecoin{href: "#"}
+          %span.glyphicon.glyphicon-save
+          Receive BTC/STR
+
+      .btn-group
+        .btn.btn-default.txn_op.sendcoin{href: "#"}
+          %span.glyphicon.glyphicon-open
+          Send BTC/STR
+
+      .btn-group
+        .btn.btn-default.txn_op.txn_history{href: "#"} Transaction History
+      %hr
+      .panel
+        %p currently support these above five operations
+      %hr
+
+
+
+      .nav
+        .btn.btn-primary{href: "#"} Bitcoin -> Stellar
+        .input-group
+          <input type="text" class="form-control">
+          %span.input-group-addon BTC
+
+      .nav
+        .btn.btn-primary{href: "#"} Stellar -> Bitcoin
+        .input-group
+          <input type="text" class="form-control">
+          %span.input-group-addon STR
+
+      .nav
+        .btn.btn-primary{href: "#"} Receive BTC/STR
+        .glyphicon.glyphicon-save
+
+      .nav
+        .btn.btn-primary{href: "#"} Send BTC/STR
+        .glyphicon.glyphicon-open
+
+      .input-group
+        <input type="text" class="form-control" placeholder="Email">
+      .panel
+        %br
+        %p currently support these above five operations
+
+      %ul.nav.nav-pills.nav-stacked
+        %li.active
+          .btn.btn-primary.txn_op.receivecoin{href: "#"}
+            %span.badge.pull-right
+            Bitcoin -> Stellar
+        %li.inactive
+          .btn.btn-primary.txn_op.receivecoin{href: "#"}
+            %span.badge.pull-right 
+            Stellar -> Bitcoin
+        %li.inactive
+          .btn.btn-primary.txn_op.receivecoin{href: "#"}
+            %span.badge.pull-right
+            Receive BTC/STR
+        %li.inactive
+          .btn.btn-primary.txn_op.receivecoin{href: "#"}
+            %span.badge.pull-right 1
+            Send BTC/STR
+
     :javascript
