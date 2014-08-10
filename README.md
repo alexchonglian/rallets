@@ -1,4 +1,5 @@
-rallets
+rallets stellar
 =======
 
-crypto-currency trading platform
+The biggest stellar exchanging platform of the world!!!
+Fuck up!!!!
