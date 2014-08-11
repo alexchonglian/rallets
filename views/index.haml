@@ -9,21 +9,25 @@
     :css
       .navbar-login
       {
-          width: 305px;
-          padding: 10px;
-          padding-bottom: 0px;
+        width: 305px;
+        padding: 10px;
+        padding-bottom: 0px;
       }
       
       .navbar-login-session
       {
-          padding: 10px;
-          padding-bottom: 0px;
-          padding-top: 0px;
+        padding: 10px;
+        padding-bottom: 0px;
+        padding-top: 0px;
       }
       
       .icon-size
       {
-          font-size: 87px;
+        font-size: 87px;
+      }
+
+      #content-panel {
+        padding-left: 10%;
       }
     %script{src: "http://code.jquery.com/jquery-1.10.2.min.js"}
     %script{src: "http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"}
@@ -113,51 +117,65 @@
           My Assets
       %hr
       .panel
-        %p currently support these above five operations
+        %p currently support six operations
       %hr
 
 
-      .input-group
-        <input type="text" class="form-control">
-        %span.input-group-addon BTC
-
-      .input-group
-        <input type="text" class="form-control">
-        %span.input-group-addon STR
-
-      .input-group
-        <input type="text" class="form-control" placeholder="Email">
-      .panel
-        %br
-        %p 
 
 
-      %ul.nav.nav-pills.nav-stacked
-        %li.active
-          %a{href: "#"}
-            Sell Bitcoin
-            %span.glyphicon.glyphicon-arrow-right
-            Stellar
-            %span.badge.pull-right
-        %li.inactive
-          %a{href: "#"}
-            Sell Stellar
-            %span.glyphicon.glyphicon-arrow-right
-            Bitcoin
-            %span.badge.pull-right 
-        %li.inactive
-          %a{href: "#"}
-            %span.glyphicon.glyphicon-save
-            Receive BTC/STR
-            %span.badge.pull-right 
-        %li.inactive
-          %a{href: "#"} 
-            %span.glyphicon.glyphicon-open
-            Send BTC/STR
-            %span.badge.pull-right 1
-        %li.inactive
-          %a{href: "#"} 
-            Transaction History
-            %span.badge.pull-right 1
+
+      .container.row.col-xs-3
+        %ul.nav.nav-pills.nav-stacked
+          %li.active
+            %a{href: "#"}
+              Sell Bitcoin
+              %span.glyphicon.glyphicon-arrow-right
+              Stellar
+              %span.badge.pull-right
+          %li.inactive
+            %a{href: "#"}
+              Sell Stellar
+              %span.glyphicon.glyphicon-arrow-right
+              Bitcoin
+              %span.badge.pull-right 
+          %li.inactive
+            %a{href: "#"}
+              %span.glyphicon.glyphicon-save
+              Receive BTC/STR
+              %span.badge.pull-right 
+          %li.inactive
+            %a{href: "#"} 
+              %span.glyphicon.glyphicon-open
+              Send BTC/STR
+              %span.badge.pull-right 1
+          %li.inactive
+            %a{href: "#"} 
+              Transaction History
+              %span.badge.pull-right 1
+          %li.inactive
+            %a{href: "#"} 
+              My Assets
+              %span.badge.pull-right 1
+      .container-fluid
+        .row.col-xs-9#content-panel
+          .input-group
+            <input type="text" class="form-control" placeholder="2.45">
+            %span.input-group-addon BTC
+
+          .input-group
+            <input type="text" class="form-control" placeholder="2317.99">
+            %span.input-group-addon STR
+
+          .input-group
+            <input type="text" class="form-control" placeholder="Email">
+          .input-group
+            <input type="text" class="form-control" placeholder="Password">
+          .input-group
+            <input type="text" class="form-control" placeholder="Confirm Password">
+          .panel
+            %br
+            %p 
+
+
 
     :javascript
