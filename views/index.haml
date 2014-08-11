@@ -26,7 +26,7 @@
         font-size: 87px;
       }
 
-      #content-panel {
+      .content-panel {
         padding-left: 10%;
       }
     %script{src: "http://code.jquery.com/jquery-1.10.2.min.js"}
@@ -126,56 +126,104 @@
 
       .container.row.col-xs-3
         %ul.nav.nav-pills.nav-stacked
-          %li.active
+          %li.active.trigger-p.trigger-p1
             %a{href: "#"}
               Sell Bitcoin
               %span.glyphicon.glyphicon-arrow-right
               Stellar
               %span.badge.pull-right
-          %li.inactive
+          %li.trigger-p.trigger-p2
             %a{href: "#"}
               Sell Stellar
               %span.glyphicon.glyphicon-arrow-right
               Bitcoin
               %span.badge.pull-right 
-          %li.inactive
+          %li.trigger-p.trigger-p3
             %a{href: "#"}
               %span.glyphicon.glyphicon-save
               Receive BTC/STR
               %span.badge.pull-right 
-          %li.inactive
+          %li.trigger-p.trigger-p4
             %a{href: "#"} 
               %span.glyphicon.glyphicon-open
               Send BTC/STR
               %span.badge.pull-right 1
-          %li.inactive
+          %li.trigger-p.trigger-p5
             %a{href: "#"} 
               Transaction History
               %span.badge.pull-right 1
-          %li.inactive
+          %li.trigger-p.trigger-p6
             %a{href: "#"} 
               My Assets
               %span.badge.pull-right 1
       .container-fluid
-        .row.col-xs-9#content-panel
-          .input-group
-            <input type="text" class="form-control" placeholder="2.45">
-            %span.input-group-addon BTC
+        .row.col-xs-9.content-panel
+          .content-p.content-p1
+            %p Page for selling stellar for bitcoin
+            .input-group
+              <input type="text" class="form-control" placeholder="2.45">
+              %span.input-group-addon BTC
+            .input-group
+              <input type="text" class="form-control" placeholder="2317.99">
+              %span.input-group-addon STR
+            .input-group
+              <input type="text" class="form-control" placeholder="Email">
+            .input-group
+              <input type="text" class="form-control" placeholder="Password">
+            .input-group
+              <input type="text" class="form-control" placeholder="Confirm Password">
 
-          .input-group
-            <input type="text" class="form-control" placeholder="2317.99">
-            %span.input-group-addon STR
-
-          .input-group
-            <input type="text" class="form-control" placeholder="Email">
-          .input-group
-            <input type="text" class="form-control" placeholder="Password">
-          .input-group
-            <input type="text" class="form-control" placeholder="Confirm Password">
-          .panel
-            %br
-            %p 
+          .content-p.content-p2
+            %p Page for selling bitcoin for stellar
+          .content-p.content-p3
+            %p Page for sending $
+          .content-p.content-p4
+            %p Page for receiving $
+          .content-p.content-p5
+            %p Page for txn history
+          .content-p.content-p6
+            %p Page for my assets
 
 
 
     :javascript
+      $(function() {
+        $('.content-p').hide();
+        $('.content-p1').show();
+
+        $('.trigger-p').on('click', function() {
+          $('.trigger-p').removeClass('active');
+          $(this).addClass('active');
+        });
+
+        $('.trigger-p1').on('click', function() {
+          $('.content-p').hide();
+          $('.content-p1').show();
+        });
+
+        $('.trigger-p2').on('click', function() {
+          $('.content-p').hide();
+          $('.content-p2').show();
+        });
+
+        $('.trigger-p3').on('click', function() {
+          $('.content-p').hide();
+          $('.content-p3').show();
+        });
+
+        $('.trigger-p4').on('click', function() {
+          $('.content-p').hide();
+          $('.content-p4').show();
+        });
+
+        $('.trigger-p5').on('click', function() {
+          $('.content-p').hide();
+          $('.content-p5').show();
+        });
+
+        $('.trigger-p6').on('click', function() {
+          $('.content-p').hide();
+          $('.content-p6').show();
+        });
+
+      })
